@@ -32,10 +32,13 @@ public class DoGetPost extends HttpServlet {
 		int num2  = Integer.parseInt(req.getParameter("num2"));
 		
 		int sum = num1 + num2;
-		req.setAttribute("param", sum);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("square");
+		res.sendRedirect("square?k="+sum);
 		
-		rd.forward(req, res);
+//		req.setAttribute("param", sum);
+		
+//		RequestDispatcher rd = req.getRequestDispatcher("square");
+//		
+//		rd.forward(req, res);
 	}
 }

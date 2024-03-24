@@ -11,7 +11,7 @@ public class MyRequestDispatcher extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res ) throws IOException {
 		
-		int param = (int)req.getAttribute("param");
+		int param = Integer.parseInt(req.getParameter("k"));
 		
 		int square = param * param;
 		PrintWriter pw = res.getWriter();
