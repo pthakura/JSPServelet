@@ -4,9 +4,19 @@
   <servlet>
   <servlet-name>ServiceWayAdd</servlet-name>
   <servlet-class>com.pthakura.servletjsp.ServiceWay</servlet-class>
+  
+  </servlet>
+  <servlet>
+  <servlet-name>DoGetPost</servlet-name>
+  <servlet-class>com.pthakura.servletjsp.DoGetPost</servlet-class>
   </servlet>
   <servlet-mapping>
   <servlet-name>ServiceWayAdd</servlet-name>
   <url-pattern>/Add</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>DoGetPost</servlet-name>
+  <url-pattern>/AddPost</url-pattern>
+  
   </servlet-mapping>
 </web-app>
