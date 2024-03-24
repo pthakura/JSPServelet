@@ -2,21 +2,39 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>ServletJSP</display-name>
   <servlet>
-  <servlet-name>ServiceWayAdd</servlet-name>
-  <servlet-class>com.pthakura.servletjsp.ServiceWay</servlet-class>
-  
+  	<servlet-name>ServiceWayAdd</servlet-name>
+  	<servlet-class>com.pthakura.servletjsp.ServiceWay</servlet-class>
   </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServiceWayAdd</servlet-name>
+  	<url-pattern>/Add</url-pattern>
+  </servlet-mapping>
   <servlet>
-  <servlet-name>DoGetPost</servlet-name>
-  <servlet-class>com.pthakura.servletjsp.DoGetPost</servlet-class>
+  	<servlet-name>DoGetPost</servlet-name>
+  	<servlet-class>com.pthakura.servletjsp.DoGetPost</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>DoGetPost</servlet-name>
+  	<url-pattern>/AddPost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet-mapping>
+  	<servlet-name>DoGetPost</servlet-name>
+  	<url-pattern>/SquareDispatcher</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+	   <servlet-name>squareServlet</servlet-name>
+	   <servlet-class>com.pthakura.servletjsp.MyRequestDispatcher</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>ServiceWayAdd</servlet-name>
-  <url-pattern>/Add</url-pattern>
+	   <servlet-name>squareServlet</servlet-name>
+	   <url-pattern>/square</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-  <servlet-name>DoGetPost</servlet-name>
-  <url-pattern>/AddPost</url-pattern>
   
-  </servlet-mapping>
+  
 </web-app>
